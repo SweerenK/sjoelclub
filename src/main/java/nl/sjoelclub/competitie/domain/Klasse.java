@@ -3,12 +3,16 @@ package nl.sjoelclub.competitie.domain;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Klasse {
@@ -21,6 +25,8 @@ public class Klasse {
 	@Enumerated(EnumType.STRING)
 	private Label label = Label.X;
 	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn(name="klasse_id")
 	private Set<Speler> spelers = new HashSet<Speler>();
 
 	public Long getId() {
