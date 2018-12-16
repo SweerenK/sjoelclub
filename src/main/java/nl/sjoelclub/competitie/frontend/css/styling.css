@@ -18,12 +18,22 @@ li:hover{
     cursor: pointer;
 }
 
+textarea{
+    width: 80%;
+    height: 80%;
+}
+
 .leftside{
-    position: absolute;
-    max-width: 33%;
+    left: 0%;
+    width: 33%;
 }
 
 .rightside{
-    position: absolute;
     left: 33%;
+    width: 66%;
+}
+
+.leftside, .rightside{
+    position: absolute;
+    height: 100%;
 }
