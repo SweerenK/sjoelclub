@@ -2,10 +2,35 @@
     <head>
         <link rel="stylesheet" href="../css/styling.css">
         <script type="text/javascript" src="../js/properties.js"></script>
+        
 
     </head>
 
     <body>
-        <p id = "test" ondblclick="hover()">Dubbelklik hier voor javascript functionaliteit.</p>
+        <div class="leftside">
+            <div id= "title">
+                <h2>Menu</h2>
+            </div>
+    
+            <div id="menu">
+                <ul>
+                    <li onclick=load(this)>Inloggen</li>
+                    <li onclick=load(this)>Leden</li>
+                    <li onclick=load(this)>Tussenstand</li>
+                </ul>
+            </div>
+      
+        </div>
+        
+        <div class="rightside">
+            <div id= "title">
+                <h2>Sjoelclub</h2>
+            </div>
+   
+            <div id= "content">
+                
+            </div>
+      
+        </div>        
     </body>
 </html>

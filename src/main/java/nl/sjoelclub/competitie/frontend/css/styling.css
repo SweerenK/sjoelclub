@@ -1,3 +1,29 @@
-p{
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: bisque;
+    color: darkgreen;
+}
+
+h2{
+    color: black;
+}
+
+li{
+    list-style-type: square;
+    margin-bottom: 10px;  
+}
+
+li:hover{
     color: red;
+    cursor: pointer;
+}
+
+.leftside{
+    position: absolute;
+    max-width: 33%;
+}
+
+.rightside{
+    position: absolute;
+    left: 33%;
 }
