@@ -7,22 +7,22 @@ function load(x){
    switch(x.innerText){
       
       case "Menu":
-         console.log("Menu");
          break;
 
       case "Inloggen":
-         y.innerHTML = '<object type="text/html" data="inlog.html"></object>';
-         console.log("Inloggen");
+         y.innerHTML = '<object id="contentobject" type="text/html" data="inlog.html" width=400 height=400></object>';
          break;
 
       case "Leden":
-         y.innerHTML = '<object type="text/html" data="leden.html"></object>';
-         console.log("Leden");
+         y.innerHTML = '<object id="contentobject" type="text/html" data="leden.html" width=400 height=400"></object>';
+         break;
+
+      case "Scores":
+         y.innerHTML = '<object id="contentobject" type="text/html" data="scores.html" width=400 height=400></object>';
          break;
 
       case "Tussenstand":
-         y.innerHTML = '<object type="text/html" data="tussenstand.html"></object>';
-         console.log("Tussenstand");
+         y.innerHTML = '<object id="contentobject" type="text/html" data="tussenstand.html" width=400 height=400></object>';
          break;
    }
 
