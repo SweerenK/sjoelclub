@@ -22,11 +22,11 @@ public class Speler {
 	private Long id;
 	private String name;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
-	private List<Score> scores = new ArrayList<Score>();
+	//@ManyToMany(fetch = FetchType.EAGER)
+	//private List<Score> scores = new ArrayList<Score>();
 	
-	@ManyToOne
-	private Klasse klasse;
+	//@ManyToOne
+	//private Klasse klasse;
 	
 	public Long getId() {
 		return id;
@@ -40,7 +40,7 @@ public class Speler {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public List<Score> getScores() {
+	/*public List<Score> getScores() {
 		return scores;
 	}
 	public void setScores(List<Score> scores) {
@@ -51,6 +51,6 @@ public class Speler {
 	}
 	public void setKlasse(Klasse klasse) {
 		this.klasse = klasse;
-	}
+	}*/
 	
 }

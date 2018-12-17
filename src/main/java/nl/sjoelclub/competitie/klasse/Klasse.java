@@ -2,8 +2,6 @@ package nl.sjoelclub.competitie.klasse;
 
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -27,9 +25,9 @@ public class Klasse {
 	@Enumerated(EnumType.STRING)
 	private Label label = Label.X;
 	
-	@OneToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name="klasse_id")
-	private Set<Speler> spelers = new HashSet<Speler>();
+	//@OneToMany(fetch = FetchType.EAGER)
+	//@JoinColumn(name="klasse_id")
+	//private Set<Speler> spelers = new HashSet<Speler>();
 
 	public Long getId() {
 		return id;
@@ -47,12 +45,12 @@ public class Klasse {
 		this.label = label;
 	}
 
-	public Set<Speler> getSpelers() {
-		return spelers;
-	}
+	//public Set<Speler> getSpelers() {
+	//	return spelers;
+	//}
 
-	public void setSpelers(Set<Speler> spelers) {
-		this.spelers = spelers;
-	}
+	//public void setSpelers(Set<Speler> spelers) {
+	//	this.spelers = spelers;
+	//}
 	
 }

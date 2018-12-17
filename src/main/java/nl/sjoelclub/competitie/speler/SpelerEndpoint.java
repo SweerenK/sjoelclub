@@ -11,8 +11,6 @@ import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import nl.sjoelclub.competitie.score.Score;
-
 @Path("speler")
 @Component
 public class SpelerEndpoint {

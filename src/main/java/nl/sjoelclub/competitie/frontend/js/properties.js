@@ -36,11 +36,9 @@ function db_findAllLeden(){
    xhr.onreadystatechange = function(){
       if(this.readyState == 4){
          var alleLeden = JSON.parse(this.responseText);
-         console.log(alleLeden);
+         
          for(var i = 0; i < alleLeden.length; i++){
-            alert(alleLeden.naam);
-            y.innerHTML += alleLeden.naam;
-            
+            y.innerHTML += alleLeden[i].name + '<br />';
          }     
       }
    }
