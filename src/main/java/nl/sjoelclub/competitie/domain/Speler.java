@@ -17,7 +17,7 @@ public class Speler {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String naam;
+	private String name;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	private List<Score> scores = new ArrayList<Score>();
@@ -31,11 +31,11 @@ public class Speler {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNaam() {
-		return naam;
+	public String getName() {
+		return name;
 	}
-	public void setNaam(String naam) {
-		this.naam = naam;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public List<Score> getScores() {
 		return scores;

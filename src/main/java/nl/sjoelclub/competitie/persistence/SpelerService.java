@@ -1,4 +1,6 @@
 package nl.sjoelclub.competitie.persistence;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +23,10 @@ public class SpelerService {
 	public Iterable<Speler> findAll() {					//Iterable is een verzameling op het hoogste niveau. Doorheenloopbaar.
 		Iterable<Speler> result = spelerRepository.findAll();
 		return result;
+	}
+	
+	public Optional<Speler> findByName(String name){
+		return spelerRepository.findByName(name);
 	}
 	
 	

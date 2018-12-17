@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 import nl.sjoelclub.competitie.domain.Score;
 import nl.sjoelclub.competitie.persistence.ScoreService;
 
-@Path("Score")
+@Path("score")
 @Component
 public class ScoreEndpoint {
 

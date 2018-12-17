@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 import nl.sjoelclub.competitie.domain.Klasse;
 import nl.sjoelclub.competitie.persistence.KlasseService;
 
-@Path("Klasse")
+@Path("klasse")
 @Component
 public class KlasseEndpoint {
 

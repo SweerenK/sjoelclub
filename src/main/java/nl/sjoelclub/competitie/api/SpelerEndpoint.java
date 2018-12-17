@@ -15,7 +15,7 @@ import nl.sjoelclub.competitie.domain.Score;
 import nl.sjoelclub.competitie.domain.Speler;
 import nl.sjoelclub.competitie.persistence.SpelerService;
 
-@Path("Speler")
+@Path("speler")
 @Component
 public class SpelerEndpoint {
 
@@ -24,7 +24,7 @@ public class SpelerEndpoint {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response listGroep(){
+	public Response listSpelers(){
 		Iterable <Speler> spelers = spelerService.findAll();
 		return Response.ok(spelers).build();
 	}
@@ -34,7 +34,7 @@ public class SpelerEndpoint {
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response postSpeler(Speler speler){
 		Speler result = spelerService.save(speler);
-		return Response.accepted(result.getId()).build();	
+		return Response.accepted(result).build();	
 	}
 	
 

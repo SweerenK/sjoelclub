@@ -25,5 +25,25 @@ function load(x){
          y.innerHTML = '<object id="contentobject" type="text/html" data="tussenstand.html" width=400 height=400></object>';
          break;
    }
+}
+
+function db_findAllLeden(){
+   var y = document.getElementById("ledenoverzicht");
+   
+   let xhr = new XMLHttpRequest();
+   xhr.open("GET","http://localhost:8082/api/speler",true);
+
+   xhr.onreadystatechange = function(){
+      if(this.readyState == 4){
+         var alleLeden = JSON.parse(this.responseText);
+         console.log(alleLeden);
+         for(var i = 0; i < alleLeden.length; i++){
+            alert(alleLeden.naam);
+            y.innerHTML += alleLeden.naam;
+            
+         }     
+      }
+   }
+   xhr.send();
 
 }
