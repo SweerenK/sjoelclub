@@ -12,27 +12,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import nl.sjoelclub.competitie.domain.Score;
-import nl.sjoelclub.competitie.persistence.ScoreService;
+import nl.sjoelclub.competitie.domain.Speler;
+import nl.sjoelclub.competitie.persistence.SpelerService;
 
-@Path("Score")
+@Path("Speler")
 @Component
-public class ScoreEndpoint {
+public class SpelerEndpoint {
 
 	@Autowired
-	private ScoreService scoreService;
+	private SpelerService spelerService;
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response listGroep(){
-		Iterable <Score> scores = scoreService.findAll();
-		return Response.ok(scores).build();
+		Iterable <Speler> spelers = spelerService.findAll();
+		return Response.ok(spelers).build();
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public Response postScore(Score score){
-		Score result = scoreService.save(score);
+	public Response postSpeler(Speler speler){
+		Speler result = spelerService.save(speler);
 		return Response.accepted(result.getId()).build();	
 	}
 	

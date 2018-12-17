@@ -11,28 +11,28 @@ import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import nl.sjoelclub.competitie.domain.Score;
-import nl.sjoelclub.competitie.persistence.ScoreService;
+import nl.sjoelclub.competitie.domain.Klasse;
+import nl.sjoelclub.competitie.persistence.KlasseService;
 
-@Path("Score")
+@Path("Klasse")
 @Component
-public class ScoreEndpoint {
+public class KlasseEndpoint {
 
 	@Autowired
-	private ScoreService scoreService;
+	private KlasseService klasseService;
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response listGroep(){
-		Iterable <Score> scores = scoreService.findAll();
-		return Response.ok(scores).build();
+		Iterable <Klasse> klasses = klasseService.findAll();
+		return Response.ok(klasses).build();
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public Response postScore(Score score){
-		Score result = scoreService.save(score);
+	public Response postKlasse(Klasse klasse){
+		Klasse result = klasseService.save(klasse);
 		return Response.accepted(result.getId()).build();	
 	}
 	
