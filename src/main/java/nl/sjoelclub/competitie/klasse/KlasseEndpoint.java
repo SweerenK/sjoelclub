@@ -1,4 +1,4 @@
-package nl.sjoelclub.competitie.api;
+package nl.sjoelclub.competitie.klasse;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -10,9 +10,6 @@ import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import nl.sjoelclub.competitie.domain.Klasse;
-import nl.sjoelclub.competitie.persistence.KlasseService;
 
 @Path("klasse")
 @Component

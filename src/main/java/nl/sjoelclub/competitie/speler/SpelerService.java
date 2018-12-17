@@ -1,11 +1,9 @@
-package nl.sjoelclub.competitie.persistence;
+package nl.sjoelclub.competitie.speler;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import nl.sjoelclub.competitie.domain.Speler;
 
 
 @Service

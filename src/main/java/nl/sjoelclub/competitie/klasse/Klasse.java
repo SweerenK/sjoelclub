@@ -1,4 +1,4 @@
-package nl.sjoelclub.competitie.domain;
+package nl.sjoelclub.competitie.klasse;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +13,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+
+import nl.sjoelclub.competitie.speler.Speler;
 
 @Entity
 public class Klasse {

@@ -1,4 +1,4 @@
-package nl.sjoelclub.competitie.api;
+package nl.sjoelclub.competitie.speler;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -11,9 +11,7 @@ import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import nl.sjoelclub.competitie.domain.Score;
-import nl.sjoelclub.competitie.domain.Speler;
-import nl.sjoelclub.competitie.persistence.SpelerService;
+import nl.sjoelclub.competitie.score.Score;
 
 @Path("speler")
 @Component

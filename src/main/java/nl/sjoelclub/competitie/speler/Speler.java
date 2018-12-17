@@ -1,4 +1,4 @@
-package nl.sjoelclub.competitie.domain;
+package nl.sjoelclub.competitie.speler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+
+import nl.sjoelclub.competitie.klasse.Klasse;
+import nl.sjoelclub.competitie.score.Score;
 
 @Entity
 public class Speler {
