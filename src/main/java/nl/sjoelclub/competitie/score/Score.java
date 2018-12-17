@@ -1,4 +1,4 @@
-package nl.sjoelclub.competitie.domain;
+package nl.sjoelclub.competitie.score;
 
 import java.time.LocalDate;
 

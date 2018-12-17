@@ -1,4 +1,4 @@
-package nl.sjoelclub.competitie.api;
+package nl.sjoelclub.competitie.score;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -11,10 +11,7 @@ import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import nl.sjoelclub.competitie.domain.Score;
-import nl.sjoelclub.competitie.persistence.ScoreService;
-
-@Path("Score")
+@Path("score")
 @Component
 public class ScoreEndpoint {
 
@@ -31,7 +28,7 @@ public class ScoreEndpoint {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public Response postWinkel(Score score){
+	public Response postScore(Score score){
 		Score result = scoreService.save(score);
 		return Response.accepted(result.getId()).build();	
 	}

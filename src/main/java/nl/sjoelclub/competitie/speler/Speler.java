@@ -1,4 +1,4 @@
-package nl.sjoelclub.competitie.domain;
+package nl.sjoelclub.competitie.speler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,19 +11,22 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
+import nl.sjoelclub.competitie.klasse.Klasse;
+import nl.sjoelclub.competitie.score.Score;
+
 @Entity
 public class Speler {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String naam;
+	private String name;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
-	private List<Score> scores = new ArrayList<Score>();
+	//@ManyToMany(fetch = FetchType.EAGER)
+	//private List<Score> scores = new ArrayList<Score>();
 	
-	@ManyToOne
-	private Klasse klasse;
+	//@ManyToOne
+	//private Klasse klasse;
 	
 	public Long getId() {
 		return id;
@@ -31,13 +34,13 @@ public class Speler {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNaam() {
-		return naam;
+	public String getName() {
+		return name;
 	}
-	public void setNaam(String naam) {
-		this.naam = naam;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public List<Score> getScores() {
+	/*public List<Score> getScores() {
 		return scores;
 	}
 	public void setScores(List<Score> scores) {
@@ -48,6 +51,6 @@ public class Speler {
 	}
 	public void setKlasse(Klasse klasse) {
 		this.klasse = klasse;
-	}
+	}*/
 	
 }
